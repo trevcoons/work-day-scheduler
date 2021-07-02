@@ -10,7 +10,7 @@ var hour5 = $("#17");
 var time = moment();
 
 function setPlanner() {
-
+//gets data for header date
   $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
   $(".time-block").each(function () {
@@ -23,17 +23,16 @@ function setPlanner() {
   });
 }
 
-
 setPlanner();
 var saveBtn = $(".saveBtn");
-
+// saves data to be used in local storage
 saveBtn.on("click", function () {
     var time = $(this).parent().attr("id");
     var schedule = $(this).siblings(".schedule").val();
 
     localStorage.setItem(time, schedule);
 });
-
+// adds color in blocks for future, present, and past
 function pastPresentFuture() {
   hour = time.hours();
   $(".time-block").each(function () {
