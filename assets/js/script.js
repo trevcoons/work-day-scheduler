@@ -33,21 +33,22 @@ saveBtn.on("click", function () {
 
     localStorage.setItem(time, schedule);
 });
-// change color to show time past, present and future
-function timeUpdate() {
-// getting moment hours in military time 
-var currentTime = moment().hours();
-// is to be able to compare hour-# to military time 
-// using conditionals to loop through the time blocks
-// each()
-// if else if else 
 
+function pastPresentFuture() {
+  hour = time.hours();
+  $(".time-block").each(function () {
+      var thisHour = parseInt($(this).attr("id"));
+
+      if (thisHour > hour) {
+          $(this).addClass("future")
+      }
+      else if (thisHour === hour) {
+          $(this).addClass("present");
+      }
+      else {
+          $(this).addClass("past");
+      }
+  })
 }
 
-timeUpdate();
-
-//display current date on page using moment.js
-// check the moment js documentation for understaning what to put into the text() method
-$('#currentDay').text(moment().format('dddd, MMMM Do'))
-
-})
+pastPresentFuture();
