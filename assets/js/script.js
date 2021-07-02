@@ -1,5 +1,13 @@
-// Purpose: create a day planner that updates to the current time block live. Also need to add events in timeblock and save in local storage.
-
+var hour9 = $("#9");
+var hour10 = $("#10");
+var hour11 = $("#11");
+var hour12 = $("#12");
+var hour1 = $("#13");
+var hour2 = $("#14");
+var hour3 = $("#15");
+var hour4 = $("#16");
+var hour5 = $("#17");
+var time = moment();
 // need some kind of button click event 
 $(document).ready(function() {
   // listen to the button click, look back at activity with an event listeneer using jquery 
@@ -37,7 +45,6 @@ var currentTime = moment().hours();
 // using conditionals to loop through the time blocks
 // each()
 // if else if else 
-
 
 }
 
