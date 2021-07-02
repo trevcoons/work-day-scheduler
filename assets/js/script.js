@@ -8,22 +8,20 @@ var hour3 = $("#15");
 var hour4 = $("#16");
 var hour5 = $("#17");
 var time = moment();
-// need some kind of button click event 
-$(document).ready(function() {
-  // listen to the button click, look back at activity with an event listeneer using jquery 
-// inputted values in the forms of text 
-    // $().on something something   
-    $('.saveBtn').on('click', function() {
-var userInput = $(this)
-.sibings('.description')
-.val()
-var time = $(this)
-// look up js methods
-.parent()
-.attr('id')
-// save in local storage
-localStorage.setItem(userInput, time)
-    })
+
+function setPlanner() {
+
+  $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+
+  $(".time-block").each(function () {
+      var id = $(this).attr("id");
+      var schedule = localStorage.getItem(id);
+
+      if (schedule !== null) {
+          $(this).children(".schedule").val(schedule);
+      }
+  });
+}
 
 
 // in order to access the local storage item we need to load the saved data
