@@ -2,6 +2,8 @@
 
 This site is a simple work day planner to help users organize their day. The app updates live to show past, present and future time blocks. Users can save their events to persist in local storage.
 
+![Screenshot](work-day-scheduler.png)
+
 ## Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -26,4 +28,4 @@ This site is a simple work day planner to help users organize their day. The app
 
 ## Acknowledgments
 
-Thanks to UC Berkeley Coding Bootcamp for teaching me HTML, CSS and JavaScript.
+Thanks to UC Berkeley Coding Bootcamp for teaching me HTML, JavaScript, JQuery, and BootStrap.
